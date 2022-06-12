@@ -73,7 +73,7 @@ Please ensure that you have the correct CSV file in ```(Path("Resources/file.csv
 Before conducting our analysis and constructing the deep learning model, we have to encode our data. <br> We will do this by using sklearn's OneHotEncoder function:
 1. Create a list of categorical variables.
 2. Create a OneHotEncoder instance:
-![OHE](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/OHE.PNG)
+![OHE](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/OHE.PNG) <br>
 We use ```(sparse=False)``` to fetch a NumPy array which is used to supplement the OneHotEncoder instance.
 3. Encode the categorical variables using OneHotEncoder.
 4. Create a DataFrame with the encoded variables.
@@ -91,8 +91,8 @@ To begin creating our deep learning neural network, we have to determine:
 4. The activation method of each hidden layer.
 5. The number of outputs.
 6. The activation method, optimizer, and additional metrics for the output(s).
-For our model, we will use the following parameters:
-![parameters](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/parameters.PNG)
+For our model, we will use the following parameters: <br>
+![parameters](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/parameters.PNG) <br>
 Some of these numbers, however, are not arbitrary. Using our scaled data, we see that we have 116 features which will be used as the number of inputs.
 7. Use sklearn's ```Sequential()``` function to create our model's instance.
 8. Use sklearn's ```Dense()``` to build the framework of our model:
