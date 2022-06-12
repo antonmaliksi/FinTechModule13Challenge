@@ -10,7 +10,7 @@ Using the CSV file provided, I have performed the following:
 2. Used the model-fit-predict pattern to compile and evaluate a binary classification model.
 3. Optimized the model.
 
-![header](url)
+![header](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/VENTURE-CAPITAL-400x257.png)
 
 ---
 
@@ -33,23 +33,23 @@ Pandas and Pathlib should be part of the base applications that were installed w
 
 To install TensorFlow, run the following:
 
-    ```
+    
     pip install --upgrade tensorflow
-    ```
+    
     
 Once the TensorFlow installation is complete, verify the installation by running the following:
 
-    ```
+    
     python -c "import tensorflow as tf;print(tf.__version__)"
-    ```
+    
   
 The output of the previous command should show version 2.0.0 or higher.
 
 Keras is intrinsically part of TensorFlow, so run the following to verify that the package is installed:
 
-    ```
+    
     python -c "import tensorflow as tf;print(tf.keras.__version__)"
-    ```
+    
 
 If any errors occur, please contact IT for further assistance.
 
@@ -73,12 +73,12 @@ Please ensure that you have the correct CSV file in ```(Path("Resources/file.csv
 Before conducting our analysis and constructing the deep learning model, we have to encode our data. <br> We will do this by using sklearn's OneHotEncoder function:
 1. Create a list of categorical variables.
 2. Create a OneHotEncoder instance:
-![OHE](url)
+![OHE](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/OHE.PNG)
 We use ```(sparse=False)``` to fetch a NumPy array which is used to supplement the OneHotEncoder instance.
 3. Encode the categorical variables using OneHotEncoder.
 4. Create a DataFrame with the encoded variables.
 5. Separate our data into X and y variables for machine learning:
-![Xy](url)
+![Xy](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/Xy.PNG)
 6. Use ```train_test_split()``` to split our data into two training and testing sets.
 7. Use ```StandardScaler()``` to scale our data.
 8. Fit and transform our scaled training and testing data.
@@ -92,11 +92,11 @@ To begin creating our deep learning neural network, we have to determine:
 5. The number of outputs.
 6. The activation method, optimizer, and additional metrics for the output(s).
 For our model, we will use the following parameters:
-![parameters](url)
+![parameters](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/parameters.PNG)
 Some of these numbers, however, are not arbitrary. Using our scaled data, we see that we have 116 features which will be used as the number of inputs.
 7. Use sklearn's ```Sequential()``` function to create our model's instance.
 8. Use sklearn's ```Dense()``` to build the framework of our model:
-![model](url)
+![model](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/model.PNG)
 9. Compile our model:
     ```python
     nn.compile(loss="binary_crossentropy", optimizer="adam", metrics=["Accuracy"])
@@ -107,7 +107,7 @@ Some of these numbers, however, are not arbitrary. Using our scaled data, we see
     ```
 
 ### Evaluate and Save the Model
-![evsave](url)
+![evsave](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/evsave.PNG)
 
 ---
 
@@ -126,10 +126,10 @@ For our first optimization, we decreased the amount of neurons in layer 1 to 50,
 As a result, we increased our accuracy from .7314 to .7322 and reduced our losses from .5591 to .5523. A great success! But we can do better.
 
 ### Alternative Model 1
-Utilizing the findings from our first optimization, we decided to keep all of the parameters of the <br> model the same and add 10 extra epochs; This thinking was to see if adding more time <br> would allow the model to reach a higher accuracy and lower loss. <br> What we found surprised us, as our accuracy decreased and loss increased - not at all optimal or benefitial to our mission. <br> Although this model was not optimal, we want to showcase how adding extra epochs might not always be the smartest choice for the given situation. <br> Other options included creating a fourth hidden layer and decreased the amount of neurons across <br> the model, as well as using different activation methods.
+Utilizing the findings from our first optimization, we decided to keep all of the parameters of the model the same <br> and add 10 extra epochs; This thinking was to see if adding more time would allow the model to <br> reach a higher accuracy and lower loss. What we found surprised us, as our accuracy decreased and loss <br> increased - not at all optimal or benefitial to our mission. Although this model was not optimal, we <br> want to showcase how adding extra epochs might not always be the smartest choice for the given situation. <br> Other options included creating a fourth hidden layer and decreased the amount of neurons across the model, as well as <br> using different activation methods.
 
 ### Comparing the Three Models.
-![models](url)
+![models](https://github.com/antonmaliksi/FinTechModule13Challenge/blob/main/Readme%20Resources/models.PNG)
 
 ---
 
